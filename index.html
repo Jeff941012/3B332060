@@ -1,12 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style></style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XX高中 官方網站</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Microsoft JhengHei", Arial, sans-serif;
+      background-color: #f4f6f8;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #0055a5;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav li {
+      position: relative;
+    }
+    nav a {
+      display: block;
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    nav a:hover {
+      background-color: #003f7d;
+    }
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #ffffff;
+      min-width: 160px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      z-index: 1000;
+    }
+    .dropdown a {
+      color: #003366;
+    }
+    .dropdown a:hover {
+      background-color: #f0f0f0;
+    }
+    nav li:hover .dropdown {
+      display: block;
+    }
+    .container {
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+    }
+    .sidebar {
+      width: 25%;
+      background-color: white;
+      padding: 15px;
+      border-radius: 6px;
+    }
+    .content {
+      width: 75%;
+      background-color: white;
+      padding: 15px;
+      border-radius: 6px;
+    }
+    h2 {
+      border-bottom: 2px solid #0055a5;
+      padding-bottom: 5px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-    
+
+  <header id="home">
+    <h1>XX高中</h1>
+    <p>Official School Website</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home">首頁</a></li>
+      <li>
+        <a href="#about">學校簡介</a>
+        <div class="dropdown">
+          <a href="#history">校史沿革</a>
+          <a href="#vision">辦學理念</a>
+          <a href="#campus">校園環境</a>
+        </div>
+      </li>
+      <li>
+        <a href="#news">最新消息</a>
+        <div class="dropdown">
+          <a href="#notice">公告事項</a>
+          <a href="#events">活動訊息</a>
+          <a href="#admission">招生資訊</a>
+        </div>
+      </li>
+      <li>
+        <a href="#admin">行政單位</a>
+        <div class="dropdown">
+          <a href="#academic">教務處</a>
+          <a href="#student">學務處</a>
+          <a href="#general">總務處</a>
+        </div>
+      </li>
+      <li><a href="#contact">聯絡我們</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="sidebar">
+      <h2 id="notice">最新公告</h2>
+      <ul>
+        <li>📢 113學年度開學日公告</li>
+        <li>📢 校慶活動流程表</li>
+        <li>📢 期中考時間表</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2 id="about">學校簡介</h2>
+      <p>
+        XX高中創立於民國XX年，致力於培養學生品格、學術與多元發展。
+      </p>
+
+      <h2 id="history">校史沿革</h2>
+      <p>本校自創校以來，持續深耕教育，培育無數優秀學子。</p>
+
+      <h2 id="vision">辦學理念</h2>
+      <p>以學生為本，強調品格、能力與國際視野。</p>
+
+      <h2 id="campus">校園環境</h2>
+      <p>擁有完善教學大樓、運動場與多功能學習空間。</p>
+
+      <h2 id="events">活動訊息</h2>
+      <ul>
+        <li>🏀 校內運動會</li>
+        <li>📚 學習歷程講座</li>
+        <li>🎤 社團成果發表</li>
+      </ul>
+
+      <h2 id="admission">招生資訊</h2>
+      <p>歡迎國中畢業生報考本校，相關資訊請洽教務處。</p>
+
+      <h2 id="admin">行政單位</h2>
+      <p>本校設有教務處、學務處及總務處。</p>
+
+      <h2 id="academic">教務處</h2>
+      <p>負責課程規劃、教學與成績相關事務。</p>
+
+      <h2 id="student">學務處</h2>
+      <p>負責學生生活輔導、社團與活動。</p>
+
+      <h2 id="general">總務處</h2>
+      <p>負責校園設備、採購與環境維護。</p>
+
+      <h2 id="contact">聯絡我們</h2>
+      <p>電話：(02)1234-5678 ｜ 地址：台灣某市某區某路123號</p>
+    </div>
+  </div>
+
+  <footer>>
+    <p>地址：台灣某市某區某路123號 ｜ 電話：(02)1234-5678</p>
+    <p>© 2025 XX高中 All Rights Reserved.</p>
+  </footer>
+
 </body>
 </html>
