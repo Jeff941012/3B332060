@@ -5,42 +5,151 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>PUBG MOBILE 官方網站</title>
 <style>
-body { margin:0; font-family:"Microsoft JhengHei", Arial, sans-serif; background:#f4f6f8; }
-header { background:url('hero_banner.jpg') center/cover no-repeat; color:white; height:500px; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; }
-header h1 { font-size:60px; margin:0; text-shadow:2px 2px 5px black; }
-header p { font-size:24px; margin:10px 0; text-shadow:1px 1px 3px black; }
-header a { background:#f5a623; color:black; padding:12px 30px; text-decoration:none; font-weight:bold; border-radius:5px; margin-top:20px; }
+body {
+  margin:0;
+  font-family:"Microsoft JhengHei", Arial, sans-serif;
+  background:#f4f6f8;
+}
 
-nav { background:#1b1b1b; }
-nav ul { list-style:none; margin:0; padding:0; display:flex; justify-content:center; }
+/* Hero Banner */
+header {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  background-image: url('3B332060/images/pubg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+header h1 {
+  font-size:60px;
+  margin:0;
+  text-shadow:2px 2px 5px black;
+}
+header p {
+  font-size:24px;
+  margin:10px 0;
+  text-shadow:1px 1px 3px black;
+}
+header a {
+  background:#f5a623;
+  color:black;
+  padding:12px 30px;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:5px;
+  margin-top:20px;
+}
+
+/* 導覽列 */
+nav {
+  background:#1b1b1b;
+}
+nav ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  justify-content:center;
+  flex-wrap: wrap;
+}
 nav li { position:relative; }
-nav a { display:block; color:white; padding:14px 20px; text-decoration:none; font-weight:bold; }
+nav a {
+  display:block;
+  color:white;
+  padding:14px 20px;
+  text-decoration:none;
+  font-weight:bold;
+}
 nav a:hover { background:#333; }
-.dropdown { display:none; position:absolute; background:white; min-width:160px; box-shadow:0 4px 8px rgba(0,0,0,0.15); z-index:10; }
+.dropdown {
+  display:none;
+  position:absolute;
+  background:white;
+  min-width:160px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.15);
+  z-index:10;
+}
 nav li:hover .dropdown { display:block; }
 .dropdown a { color:#333; font-weight:normal; }
 
-.section { padding:60px 20px; background:white; margin-bottom:20px; border-radius:6px; width:90%; max-width:1200px; margin-left:auto; margin-right:auto; }
-.section h2 { border-bottom:3px solid #f5a623; padding-bottom:10px; margin-bottom:20px; }
+/* 內容區塊 */
+.section {
+  padding:60px 20px;
+  background:white;
+  margin-bottom:20px;
+  border-radius:6px;
+  width:90%;
+  max-width:1200px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.section h2 {
+  border-bottom:3px solid #f5a623;
+  padding-bottom:10px;
+  margin-bottom:20px;
+}
 
-.marquee { overflow:hidden; white-space:nowrap; background:#000; padding:10px 0; }
-.marquee img { height:180px; margin-right:20px; vertical-align:middle; }
-.marquee-content { display:inline-block; animation:scroll 30s linear infinite; }
+/* 跑馬燈 */
+.marquee {
+  overflow:hidden;
+  white-space:nowrap;
+  background:#000;
+  padding:10px 0;
+}
+.marquee img {
+  height:180px;
+  margin-right:20px;
+  vertical-align:middle;
+}
+.marquee-content {
+  display:inline-block;
+  animation:scroll 30s linear infinite;
+}
 @keyframes scroll { from { transform:translateX(100%);} to { transform:translateX(-100%);} }
 
-footer { background:#1b1b1b; color:white; text-align:center; padding:20px; }
+/* Footer */
+footer {
+  background:#1b1b1b;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
 
-a.link { color:#f5a623; text-decoration:none; font-weight:bold; margin-right:10px; }
+/* 下載與社群連結 */
+a.link {
+  color:#f5a623;
+  text-decoration:none;
+  font-weight:bold;
+  margin-right:10px;
+}
+
+/* 手機自適應 */
+@media(max-width:768px){
+  header h1 { font-size:40px; }
+  header p { font-size:18px; }
+  header { height:400px; }
+  nav ul { flex-direction: column; }
+  nav li { width:100%; text-align:center; }
+}
 </style>
 </head>
 <body>
 
+<!-- Hero Banner -->
 <header>
   <h1>PUBG MOBILE</h1>
   <p>全球百人大逃殺手遊</p>
   <a href="https://www.pubgmobile.com/" target="_blank">立即下載</a>
 </header>
 
+<!-- 導覽列 -->
 <nav>
   <ul>
     <li><a href="#about">遊戲介紹</a></li>
@@ -52,11 +161,13 @@ a.link { color:#f5a623; text-decoration:none; font-weight:bold; margin-right:10p
   </ul>
 </nav>
 
+<!-- 遊戲介紹 -->
 <div class="section" id="about">
   <h2>遊戲介紹</h2>
   <p>PUBG MOBILE 是一款百人大逃殺手遊，玩家空降至孤島，蒐集武器和資源，最後生存者勝出。支援單人、雙人、四人模式，玩法緊張刺激。</p>
 </div>
 
+<!-- 遊戲模式 -->
 <div class="section" id="modes">
   <h2>遊戲模式</h2>
   <ul>
@@ -66,6 +177,7 @@ a.link { color:#f5a623; text-decoration:none; font-weight:bold; margin-right:10p
   </ul>
 </div>
 
+<!-- 地圖介紹 -->
 <div class="section" id="maps">
   <h2>地圖介紹</h2>
   <p>包含 Erangel、Miramar、Sanhok、Livik，每張地圖都有不同地形與戰術策略。</p>
@@ -80,20 +192,23 @@ a.link { color:#f5a623; text-decoration:none; font-weight:bold; margin-right:10p
   </div>
 </div>
 
+<!-- 武器與載具 -->
 <div class="section" id="weapons">
   <h2>武器與載具</h2>
   <p>遊戲內擁有各類步槍、狙擊槍、衝鋒槍及霰彈槍，並有吉普車、摩托車、裝甲車等載具可使用。</p>
 </div>
 
+<!-- 活動 & 最新消息 -->
 <div class="section" id="events">
   <h2>活動 & 最新消息</h2>
   <ul>
-    <li>🎁 新角色造型登場254</li>
+    <li>🎁 新角色造型登場</li>
     <li>🏆 全球電競賽事</li>
     <li>🎉 限時合作活動</li>
   </ul>
 </div>
 
+<!-- 官方下載與社群連結 -->
 <div class="section" id="links">
   <h2>官方下載與社群連結</h2>
   <a class="link" href="https://www.pubgmobile.com/" target="_blank">官方網站</a>
@@ -102,6 +217,7 @@ a.link { color:#f5a623; text-decoration:none; font-weight:bold; margin-right:10p
   <a class="link" href="https://apps.apple.com/app/pubg-mobile/id1330123889" target="_blank">App Store 下載</a>
 </div>
 
+<!-- Footer -->
 <footer>
   <p>© 2025 PUBG MOBILE Corporation. All Rights Reserved.</p>
 </footer>
