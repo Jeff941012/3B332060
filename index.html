@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>PUBG MOBILE 官方網站</title>
+
 <style>
 body {
   margin:0;
@@ -13,19 +14,18 @@ body {
 
 /* Hero Banner */
 header {
-  position: relative;
-  height: 500px;
-  width: 100%;
-  background-image: url('3B332060/images/pubg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
+  height:500px;
+  width:100%;
+  background-image:url('images/pubg.jpg');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
 }
 header h1 {
   font-size:60px;
@@ -57,9 +57,10 @@ nav ul {
   padding:0;
   display:flex;
   justify-content:center;
-  flex-wrap: wrap;
 }
-nav li { position:relative; }
+nav li {
+  position:relative;
+}
 nav a {
   display:block;
   color:white;
@@ -67,28 +68,18 @@ nav a {
   text-decoration:none;
   font-weight:bold;
 }
-nav a:hover { background:#333; }
-.dropdown {
-  display:none;
-  position:absolute;
-  background:white;
-  min-width:160px;
-  box-shadow:0 4px 8px rgba(0,0,0,0.15);
-  z-index:10;
+nav a:hover {
+  background:#333;
 }
-nav li:hover .dropdown { display:block; }
-.dropdown a { color:#333; font-weight:normal; }
 
-/* 內容區塊 */
+/* 內容區 */
 .section {
   padding:60px 20px;
   background:white;
-  margin-bottom:20px;
+  margin:20px auto;
   border-radius:6px;
   width:90%;
   max-width:1200px;
-  margin-left:auto;
-  margin-right:auto;
 }
 .section h2 {
   border-bottom:3px solid #f5a623;
@@ -103,16 +94,66 @@ nav li:hover .dropdown { display:block; }
   background:#000;
   padding:10px 0;
 }
+.marquee-content {
+  display:inline-block;
+  animation:scroll 25s linear infinite;
+}
 .marquee img {
   height:180px;
   margin-right:20px;
-  vertical-align:middle;
 }
-.marquee-content {
-  display:inline-block;
-  animation:scroll 30s linear infinite;
+@keyframes scroll {
+  from { transform:translateX(100%); }
+  to { transform:translateX(-100%); }
 }
-@keyframes scroll { from { transform:translateX(100%);} to { transform:translateX(-100%);} }
+
+/* ===== 武器展示（互動式）===== */
+.weapon-display {
+  position: relative;
+  width: 420px;
+  height: 420px;
+  margin: 40px auto 0;
+}
+.weapon-display img {
+  position: absolute;
+}
+
+/* 主武器不動 */
+.weapon-main {
+  width: 260px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 配件容器 */
+.accessory {
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.accessory img {
+  width: 80px;
+  display: block;
+}
+.accessory:hover img {
+  transform: scale(1.2);
+}
+
+/* 配件浮窗 */
+.tooltip {
+  position: absolute;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+  z-index: 100;
+}
 
 /* Footer */
 footer {
@@ -122,24 +163,22 @@ footer {
   padding:20px;
 }
 
-/* 下載與社群連結 */
-a.link {
-  color:#f5a623;
-  text-decoration:none;
-  font-weight:bold;
-  margin-right:10px;
-}
-
-/* 手機自適應 */
+/* RWD */
 @media(max-width:768px){
   header h1 { font-size:40px; }
   header p { font-size:18px; }
   header { height:400px; }
-  nav ul { flex-direction: column; }
-  nav li { width:100%; text-align:center; }
+
+  .weapon-display {
+    width: 300px;
+    height: 300px;
+  }
+  .weapon-main { width: 180px; }
+  .accessory img { width: 60px; }
 }
 </style>
 </head>
+
 <body>
 
 <!-- Hero Banner -->
@@ -157,23 +196,22 @@ a.link {
     <li><a href="#maps">地圖</a></li>
     <li><a href="#weapons">武器/載具</a></li>
     <li><a href="#events">活動消息</a></li>
-    <li><a href="#links">官方連結</a></li>
   </ul>
 </nav>
 
 <!-- 遊戲介紹 -->
 <div class="section" id="about">
   <h2>遊戲介紹</h2>
-  <p>PUBG MOBILE 是一款百人大逃殺手遊，玩家空降至孤島，蒐集武器和資源，最後生存者勝出。支援單人、雙人、四人模式，玩法緊張刺激。</p>
+  <p>PUBG MOBILE 是一款百人大逃殺手遊，玩家空降孤島蒐集裝備，最後生存者獲勝。</p>
 </div>
 
 <!-- 遊戲模式 -->
 <div class="section" id="modes">
   <h2>遊戲模式</h2>
   <ul>
-    <li>🎯 經典模式（單人/雙人/四人）</li>
-    <li>⚔️ 競技場模式（快速對戰）</li>
-    <li>🧟 殭屍模式（PvE合作挑戰）</li>
+    <li>🎯 經典模式</li>
+    <li>⚔️ 競技場模式</li>
+    <li>🧟 殭屍模式</li>
   </ul>
 </div>
 
@@ -181,46 +219,78 @@ a.link {
 <div class="section" id="maps">
   <h2>地圖介紹</h2>
   <p>包含 Erangel、Miramar、Sanhok、Livik，每張地圖都有不同地形與戰術策略。</p>
-
   <div class="marquee">
     <div class="marquee-content">
-      <img src="map1.jpg" alt="地圖1">
-      <img src="map2.jpg" alt="地圖2">
-      <img src="map3.jpg" alt="地圖3">
-      <img src="map4.jpg" alt="地圖4">
+      <img src="images/pubgmap1.jpg">
+      <img src="images/pubgmap2.jpg">
+      <img src="images/pubgmap3.jpg">
+      <img src="images/pubgmap4.jpg">
     </div>
   </div>
 </div>
 
-<!-- 武器與載具 -->
+<!-- ⭐ 武器區 -->
 <div class="section" id="weapons">
   <h2>武器與載具</h2>
-  <p>遊戲內擁有各類步槍、狙擊槍、衝鋒槍及霰彈槍，並有吉普車、摩托車、裝甲車等載具可使用。</p>
+  <p>以下為 M416 與可裝配配件示意：</p>
+
+  <div class="weapon-display">
+    <!-- 主武器 -->
+    <img src="images/M416_new.png" class="weapon-main" alt="M416">
+
+    <!-- 配件 -->
+    <div class="accessory" style="top:0; left:50%;" data-name="4倍鏡" data-desc="提高遠距離瞄準精度">
+      <img src="images/4倍鏡.png" alt="4倍鏡">
+    </div>
+    <div class="accessory" style="top:42%; right:40px;" data-name="槍口補償器" data-desc="減少射擊後後座力">
+      <img src="images/槍口補償器.png" alt="槍口補償器">
+    </div>
+    <div class="accessory" style="bottom:0; left:50%;" data-name="垂直握把" data-desc="改善射擊穩定性">
+      <img src="images/垂直握把.png" alt="垂直握把">
+    </div>
+    <div class="accessory" style="top:50%; left:40px;" data-name="槍托" data-desc="增加射擊穩定性">
+      <img src="images/槍托.png" alt="槍托">
+    </div>
+
+    <!-- 配件說明浮窗 -->
+    <div class="tooltip" id="tooltip"></div>
+  </div>
 </div>
 
 <!-- 活動 & 最新消息 -->
 <div class="section" id="events">
   <h2>活動 & 最新消息</h2>
   <ul>
-    <li>🎁 新角色造型登場</li>
-    <li>🏆 全球電競賽事</li>
-    <li>🎉 限時合作活動</li>
+    <li>🎁 新造型登場</li>
+    <li>🏆 電競賽事</li>
+    <li>🎉 限時合作</li>
   </ul>
-</div>
-
-<!-- 官方下載與社群連結 -->
-<div class="section" id="links">
-  <h2>官方下載與社群連結</h2>
-  <a class="link" href="https://www.pubgmobile.com/" target="_blank">官方網站</a>
-  <a class="link" href="https://www.facebook.com/PUBGMOBILE/" target="_blank">Facebook 粉絲專頁</a>
-  <a class="link" href="https://play.google.com/store/apps/details?id=com.tencent.ig" target="_blank">Google Play 下載</a>
-  <a class="link" href="https://apps.apple.com/app/pubg-mobile/id1330123889" target="_blank">App Store 下載</a>
 </div>
 
 <!-- Footer -->
 <footer>
-  <p>© 2025 PUBG MOBILE Corporation. All Rights Reserved.</p>
+  <p>© 2025 PUBG MOBILE Corporation</p>
 </footer>
+
+<script>
+// 配件 hover 顯示說明
+const accessories = document.querySelectorAll('.accessory');
+const tooltip = document.getElementById('tooltip');
+
+accessories.forEach(acc => {
+  acc.addEventListener('mousemove', (e) => {
+    const name = acc.getAttribute('data-name');
+    const desc = acc.getAttribute('data-desc');
+    tooltip.innerHTML = `<strong>${name}</strong><br>${desc}`;
+    tooltip.style.top = (e.offsetY - 40) + 'px';
+    tooltip.style.left = (e.offsetX + 20) + 'px';
+    tooltip.style.opacity = 1;
+  });
+  acc.addEventListener('mouseleave', () => {
+    tooltip.style.opacity = 0;
+  });
+});
+</script>
 
 </body>
 </html>
