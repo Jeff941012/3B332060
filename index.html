@@ -1,191 +1,110 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>XX高中 官方網站</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Microsoft JhengHei", Arial, sans-serif;
-      background-color: #f4f6f8;
-    }
-    header {
-      background-color: #003366;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background-color: #0055a5;
-      display: flex;
-      justify-content: center;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-    nav li {
-      position: relative;
-    }
-    nav a {
-      display: block;
-      color: white;
-      padding: 14px 20px;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-    nav a:hover {
-      background-color: #003f7d;
-    }
-    .dropdown {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #ffffff;
-      min-width: 160px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-      z-index: 1000;
-    }
-    .dropdown a {
-      color: #003366;
-    }
-    .dropdown a:hover {
-      background-color: #f0f0f0;
-    }
-    nav li:hover .dropdown {
-      display: block;
-    }
-    .container {
-      display: flex;
-      padding: 20px;
-      gap: 20px;
-    }
-    .sidebar {
-      width: 25%;
-      background-color: white;
-      padding: 15px;
-      border-radius: 6px;
-    }
-    .content {
-      width: 75%;
-      background-color: white;
-      padding: 15px;
-      border-radius: 6px;
-    }
-    h2 {
-      border-bottom: 2px solid #0055a5;
-      padding-bottom: 5px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      margin-top: 20px;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PUBG MOBILE 官方網站</title>
+<style>
+body { margin:0; font-family:"Microsoft JhengHei", Arial, sans-serif; background:#f4f6f8; }
+header { background:url('hero_banner.jpg') center/cover no-repeat; color:white; height:500px; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; }
+header h1 { font-size:60px; margin:0; text-shadow:2px 2px 5px black; }
+header p { font-size:24px; margin:10px 0; text-shadow:1px 1px 3px black; }
+header a { background:#f5a623; color:black; padding:12px 30px; text-decoration:none; font-weight:bold; border-radius:5px; margin-top:20px; }
+
+nav { background:#1b1b1b; }
+nav ul { list-style:none; margin:0; padding:0; display:flex; justify-content:center; }
+nav li { position:relative; }
+nav a { display:block; color:white; padding:14px 20px; text-decoration:none; font-weight:bold; }
+nav a:hover { background:#333; }
+.dropdown { display:none; position:absolute; background:white; min-width:160px; box-shadow:0 4px 8px rgba(0,0,0,0.15); z-index:10; }
+nav li:hover .dropdown { display:block; }
+.dropdown a { color:#333; font-weight:normal; }
+
+.section { padding:60px 20px; background:white; margin-bottom:20px; border-radius:6px; width:90%; max-width:1200px; margin-left:auto; margin-right:auto; }
+.section h2 { border-bottom:3px solid #f5a623; padding-bottom:10px; margin-bottom:20px; }
+
+.marquee { overflow:hidden; white-space:nowrap; background:#000; padding:10px 0; }
+.marquee img { height:180px; margin-right:20px; vertical-align:middle; }
+.marquee-content { display:inline-block; animation:scroll 30s linear infinite; }
+@keyframes scroll { from { transform:translateX(100%);} to { transform:translateX(-100%);} }
+
+footer { background:#1b1b1b; color:white; text-align:center; padding:20px; }
+
+a.link { color:#f5a623; text-decoration:none; font-weight:bold; margin-right:10px; }
+</style>
 </head>
 <body>
 
-  <header id="home">
-    <h1>XX高中</h1>
-    <p>Official School Website</p>
-  </header>
+<header>
+  <h1>PUBG MOBILE</h1>
+  <p>全球百人大逃殺手遊</p>
+  <a href="https://www.pubgmobile.com/" target="_blank">立即下載</a>
+</header>
 
-  <nav>
-    <ul>
-      <li><a href="#home">首頁</a></li>
-      <li>
-        <a href="#about">學校簡介</a>
-        <div class="dropdown">
-          <a href="#history">校史沿革</a>
-          <a href="#vision">辦學理念</a>
-          <a href="#campus">校園環境</a>
-        </div>
-      </li>
-      <li>
-        <a href="#news">最新消息</a>
-        <div class="dropdown">
-          <a href="#notice">公告事項</a>
-          <a href="#events">活動訊息</a>
-          <a href="#admission">招生資訊</a>
-        </div>
-      </li>
-      <li>
-        <a href="#admin">行政單位</a>
-        <div class="dropdown">
-          <a href="#academic">教務處</a>
-          <a href="#student">學務處</a>
-          <a href="#general">總務處</a>
-        </div>
-      </li>
-      <li><a href="#contact">聯絡我們</a></li>
-    </ul>
-  </nav>
+<nav>
+  <ul>
+    <li><a href="#about">遊戲介紹</a></li>
+    <li><a href="#modes">遊戲模式</a></li>
+    <li><a href="#maps">地圖</a></li>
+    <li><a href="#weapons">武器/載具</a></li>
+    <li><a href="#events">活動消息</a></li>
+    <li><a href="#links">官方連結</a></li>
+  </ul>
+</nav>
 
-  <div class="container">
-    <div class="sidebar">
-      <h2 id="notice">最新公告</h2>
-      <ul>
-        <li>📢 113學年度開學日公告</li>
-        <li>📢 校慶活動流程表</li>
-        <li>📢 期中考時間表</li>
-      </ul>
-    </div>
+<div class="section" id="about">
+  <h2>遊戲介紹</h2>
+  <p>PUBG MOBILE 是一款百人大逃殺手遊，玩家空降至孤島，蒐集武器和資源，最後生存者勝出。支援單人、雙人、四人模式，玩法緊張刺激。</p>
+</div>
 
-    <div class="content">
-      <h2 id="about">學校簡介</h2>
-      <p>
-        XX高中創立於民國XX年，致力於培養學生品格、學術與多元發展。
-      </p>
+<div class="section" id="modes">
+  <h2>遊戲模式</h2>
+  <ul>
+    <li>🎯 經典模式（單人/雙人/四人）</li>
+    <li>⚔️ 競技場模式（快速對戰）</li>
+    <li>🧟 殭屍模式（PvE合作挑戰）</li>
+  </ul>
+</div>
 
-      <h2 id="history">校史沿革</h2>
-      <p>本校自創校以來，持續深耕教育，培育無數優秀學子。</p>
+<div class="section" id="maps">
+  <h2>地圖介紹</h2>
+  <p>包含 Erangel、Miramar、Sanhok、Livik，每張地圖都有不同地形與戰術策略。</p>
 
-      <h2 id="vision">辦學理念</h2>
-      <p>以學生為本，強調品格、能力與國際視野。</p>
-
-      <h2 id="campus">校園環境</h2>
-      <p>擁有完善教學大樓、運動場與多功能學習空間。</p>
-
-      <h2 id="events">活動訊息</h2>
-      <ul>
-        <li>🏀 校內運動會</li>
-        <li>📚 學習歷程講座</li>
-        <li>🎤 社團成果發表</li>
-      </ul>
-
-      <h2 id="admission">招生資訊</h2>
-      <p>歡迎國中畢業生報考本校，相關資訊請洽教務處。</p>
-
-      <h2 id="admin">行政單位</h2>
-      <p>本校設有教務處、學務處及總務處。</p>
-
-      <h2 id="academic">教務處</h2>
-      <p>負責課程規劃、教學與成績相關事務。</p>
-
-      <h2 id="student">學務處</h2>
-      <p>負責學生生活輔導、社團與活動。</p>
-
-      <h2 id="general">總務處</h2>
-      <p>負責校園設備、採購與環境維護。</p>
-
-      <h2 id="contact">聯絡我們</h2>
-      <p>電話：(02)1234-5678 ｜ 地址：台灣某市某區某路123號</p>
+  <div class="marquee">
+    <div class="marquee-content">
+      <img src="map1.jpg" alt="地圖1">
+      <img src="map2.jpg" alt="地圖2">
+      <img src="map3.jpg" alt="地圖3">
+      <img src="map4.jpg" alt="地圖4">
     </div>
   </div>
+</div>
 
-  <footer>>
-    <p>地址：台灣某市某區某路123號 ｜ 電話：(02)1234-5678</p>
-    <p>© 2025 XX高中 All Rights Reserved.</p>
-  </footer>
+<div class="section" id="weapons">
+  <h2>武器與載具</h2>
+  <p>遊戲內擁有各類步槍、狙擊槍、衝鋒槍及霰彈槍，並有吉普車、摩托車、裝甲車等載具可使用。</p>
+</div>
+
+<div class="section" id="events">
+  <h2>活動 & 最新消息</h2>
+  <ul>
+    <li>🎁 新角色造型登場</li>
+    <li>🏆 全球電競賽事</li>
+    <li>🎉 限時合作活動</li>
+  </ul>
+</div>
+
+<div class="section" id="links">
+  <h2>官方下載與社群連結</h2>
+  <a class="link" href="https://www.pubgmobile.com/" target="_blank">官方網站</a>
+  <a class="link" href="https://www.facebook.com/PUBGMOBILE/" target="_blank">Facebook 粉絲專頁</a>
+  <a class="link" href="https://play.google.com/store/apps/details?id=com.tencent.ig" target="_blank">Google Play 下載</a>
+  <a class="link" href="https://apps.apple.com/app/pubg-mobile/id1330123889" target="_blank">App Store 下載</a>
+</div>
+
+<footer>
+  <p>© 2025 PUBG MOBILE Corporation. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
